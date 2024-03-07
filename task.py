@@ -2,9 +2,9 @@ from flask import Flask, url_for, render_template
 app = Flask(__name__)
 
 
-@app.route('/choice/<planet_name>')
-def return_mars_page(planet_name):
-    return render_template('index.html', planet_name=planet_name)
+@app.route('/results/<nickname>/<int:level>/<float:rating>')
+def return_mars_page(nickname, level, rating):
+    return render_template('index.html', planet_name=nickname, level=level, rating=rating)
 
 
 if __name__ == '__main__':
