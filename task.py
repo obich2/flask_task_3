@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/results/<nickname>/<int:level>/<float:rating>')
 def return_mars_page(nickname, level, rating):
-    return render_template('index.html', planet_name=nickname, level=level, rating=rating)
+    return render_template('index.html', nickname=nickname, level=level, rating=rating)
 
 
 if __name__ == '__main__':
